@@ -15,15 +15,35 @@ var disengage = function(){
 	dragging = false;
 	context.beginPath();
 }
-var putPoint = function(e){
+var putPointForMobileDevices = function(e){
+	
 	if(dragging){
-		context.lineTo(e.clientX,e.clientY);
+		var x = e.touches[0].clientX;
+		var y = e.touches[0].clientY;
+		context.lineTo(x,y);
 		context.stroke();
 		context.beginPath();
-		context.arc(e.clientX,e.clientY,radius,0,Math.PI*2);
+		context.arc(x,y,radius,0,Math.PI*2);
 		context.fill();
 		context.beginPath();
-		context.moveTo(e.clientX,e.clientY);
+		context.moveTo(x,y);
+		console.log(e.touches[0]);
+	}
+	
+}
+var putPointForDesktop = function(e){
+	
+	if(dragging){
+		var x = e.clientX;
+		var y = e.clientY;
+		context.lineTo(x,y);
+		context.stroke();
+		context.beginPath();
+		context.arc(x,y,radius,0,Math.PI*2);
+		context.fill();
+		context.beginPath();
+		context.moveTo(x,y);
+		console.log(e.touches[0]);
 	}
 	
 }
@@ -33,10 +53,9 @@ var putPoint = function(e){
 
 canvas.addEventListener('mousedown',engage);
 canvas.addEventListener('mouseup',disengage);
-canvas.addEventListener("mousemove",putPoint);
-
+canvas.addEventListener("mousemove",putPointForDesktop);
 
 canvas.addEventListener('touchstart',engage);
 canvas.addEventListener('touchend',disengage);
-canvas.addEventListener("touchmove",putPoint);
+canvas.addEventListener("touchmove",putPointForMobileDevices);
 
