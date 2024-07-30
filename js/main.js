@@ -4,9 +4,6 @@ var context = canvas.getContext("2d");
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 
-
-
-
 var radius = 5;
 var dragging = false;
 context.lineWidth = radius*2;
@@ -37,4 +34,9 @@ var putPoint = function(e){
 canvas.addEventListener('mousedown',engage);
 canvas.addEventListener('mouseup',disengage);
 canvas.addEventListener("mousemove",putPoint);
+
+
+canvas.addEventListener('touchstart',engage);
+canvas.addEventListener('touchend',disengage);
+canvas.addEventListener("touchmove",putPoint);
 
