@@ -1,4 +1,4 @@
-var colors = ['black','grey','white','red','orange'];
+var colors = ['black','grey','white','red','orange','blue','pink'];
 
 var swatches = document.getElementsByClassName('swatch');
 

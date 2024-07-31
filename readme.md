@@ -22,10 +22,10 @@ To run this application locally, follow these steps:
 
 1. Clone this repository:
    ```sh
-   git clone https://github.com/yourusername/CanvasArtStudio.git
+   git clone https://github.com/harish-kushwah/SketchPad.git
 2. Navigate to the project directory:
     ```sh
-    cd CanvasArtStudio
+    cd SketchPad
 3. Open the index.html file in your browser:
     open index.html
 
