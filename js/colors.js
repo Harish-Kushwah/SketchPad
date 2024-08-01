@@ -1,6 +1,7 @@
 var colors = ['black','grey','white','red','orange','blue','pink'];
 
 var swatches = document.getElementsByClassName('swatch');
+var selectedColor=colors[i];
 
 
 for(var i =0, n=colors.length; i<n; i++){
@@ -20,10 +21,14 @@ function setColor(color){
 	}
 	
 }
+
 function setSwatch(e){
 	var swatch = e.target;
-	setColor(swatch.style.backgroundColor);
+	selectedColor = swatch.style.backgroundColor;
+	setColor(selectedColor);
+	setBorderColor(selectedColor);
 	swatch.className +=' active';
 }
 
 setSwatch({target:document.getElementsByClassName('swatch')[0]});
+

@@ -17,6 +17,11 @@
 	top:0;
 	background-color:#2f2f2f;
 	color:white;
+
+	display:flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
 	
 }
 .radcontrol1{
@@ -26,9 +31,11 @@
 	display:inline-block;
 	text-align:center;
 	padding:5px;
+	cursor: pointer;
 }
 #rad{
 	float:left;
+	margin-left: 15px;
 }
 #colors{
 	float:right;
@@ -51,8 +58,7 @@
 	display:block;
 }
 #save{
-	float:right;
-	margin-right:20px;
+	margin-right:5px;
 	height:30px;
 	padding:8px;
 	background-color:#434343;
@@ -64,7 +70,7 @@
 }
 
 #clear{
-	float:right;
+	margin-right: 10px;
 	margin-right:5px;
 	height:30px;
 	padding:8px;
@@ -76,7 +82,26 @@
 #clear:hover{
 	background-color:#818181;
 }
-
+#penbar{
+	padding: 5px;
+	margin-left:10px ;
+	cursor: pointer;
+}
+#penbar i{
+	padding: 5px;
+}
+.active-pen{
+	border-bottom: 3px solid white;
+}
+#subtoolbar{
+	display:flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+}
+#colortoolbar{
+	border: 1px solid red;
+}
 @media only screen and (max-width: 600px) {
 	#colors{
 		display: flex;
@@ -84,7 +109,7 @@
 		float:right;
 		margin: 0px;
 		padding-right:5px ;
-		margin-top: 50px;
+		margin-top: 270px;
 	
 	}
 	#save,#clear{

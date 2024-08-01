@@ -5,30 +5,43 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>Drawing App</title>
 		<link rel="stylesheet" href="./css/master.css">
+		<script src='https://kit.fontawesome.com/5db7c9bc47.js' crossorigin='anonymous'></script> 
+</head>
 	</head>
 	<style>
 	
 	</style>
 	<body >
 		<div id="toolbar">
-			<div id="rad">	
-				 Pen Size:<span id="radval">5</span>
-				<div class="radcontrol">
-				<div id ="decrad" class="radcontrol1">-</div>
-				<div id ="incrad" class="radcontrol1">+</div></div>
-		
-			</div>
-			<div id="colors">
-			 
-			</div>
+		  <div id="subtoolbar">
 			
 			<div id="save">
 			 Save
 			</div>
 			<div id="clear">
-			 Clear
+				Clear
+			</div>
+
+			<div id="rad">	
+			
+				<div class="radcontrol">
+				<div id ="decrad" class="radcontrol1">-</div>
+				<span id="radval">5</span>
+				<div id ="incrad" class="radcontrol1">+</div></div>
+		
+			</div>
+			<div id="penbar">
+				<i class="fa-solid fa-pencil"></i>
+				<i class="fa-solid fa-pen"  id="pen"></i>
+				<i class="fa-solid fa-brush" id="brush"></i>
+				<i class="fa-solid fa-eraser"></i>
 			</div>
 			
+		  </div>
+		<div class="colortoolbar">	
+		<div id="colors">
+		</div>
+		</div>
 
 		</div>
 		
@@ -41,6 +54,8 @@
 		<script src="./js/colors.js"></script>
 		<script src="./js/save.js"></script>
 		<script src="./js/clear.js"></script>
+		<script src="./js/pen.js"></script>
+		<script src="./js/brush.js"></script>
 	</body>
 	
 </html>
