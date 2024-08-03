@@ -9,7 +9,8 @@ var dragging = false;
 context.lineWidth = radius*2;
 var engage = function(e){
 	dragging = true;
-	putPoint(e);
+	putPointForDesktop(e);
+	putPointForMobileDevices(e);
 }
 var disengage = function(){
 	dragging = false;
@@ -27,12 +28,10 @@ var putPointForMobileDevices = function(e){
 		context.fill();
 		context.beginPath();
 		context.moveTo(x,y);
-		console.log(e.touches[0]);
 	}
 	
 }
 var putPointForDesktop = function(e){
-	
 	if(dragging){
 		var x = e.clientX;
 		var y = e.clientY;
@@ -43,9 +42,7 @@ var putPointForDesktop = function(e){
 		context.fill();
 		context.beginPath();
 		context.moveTo(x,y);
-		console.log(e.touches[0]);
 	}
-	
 }
 
 

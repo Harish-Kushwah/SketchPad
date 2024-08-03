@@ -32,6 +32,10 @@
 	text-align:center;
 	padding:5px;
 	cursor: pointer;
+	border-radius:5px;
+}
+.radcontrol1:hover{
+	background-color:#818181;
 }
 #rad{
 	float:left;
@@ -39,6 +43,7 @@
 }
 #colors{
 	float:right;
+	cursor: pointer;
 }
 .swatch{
 	width:30px;
@@ -56,6 +61,7 @@
  
 #canvas {
 	display:block;
+	cursor: pointer;
 }
 #save{
 	margin-right:5px;
@@ -64,6 +70,7 @@
 	background-color:#434343;
 	padding-bottom:20px;
 	border-radius:5px;
+	cursor: pointer;
 }
 #save:hover{
 	background-color:#818181;
@@ -77,6 +84,7 @@
 	background-color:#434343;
 	padding-bottom:20px;
 	border-radius:5px;
+	cursor: pointer;
 }
 
 #clear:hover{
