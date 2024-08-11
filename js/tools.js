@@ -45,10 +45,10 @@ function setBorderColor(color){
 
 }
 
-function activatePen(e){
+function activatePen(){
     if(!isPenSelected){
         setRadius(penRadius);
-        e.target.className +=' active-pen';
+        pen.className +=' active-pen';
         isPenSelected = true;
         deactivateBrush(penRadius);
         deactivateEraser(penRadius);
@@ -56,7 +56,7 @@ function activatePen(e){
     }
     else{
         setRadius(defaultRad)
-        e.target.classList.remove("active-pen");
+        pen.classList.remove("active-pen");
         isPenSelected = false;
     }
 
@@ -140,3 +140,6 @@ function deactivatePencil(radius){
     pencil.classList.remove("active-pen");
     isPencilSelected = false;
 }
+
+//set the default active
+activatePen();
