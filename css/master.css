@@ -74,6 +74,7 @@
 }
 #save:hover{
 	background-color:#818181;
+	transition-duration: 0.5s;
 }
 
 #clear{
@@ -89,6 +90,7 @@
 
 #clear:hover{
 	background-color:#818181;
+	transition-duration: 0.5s;
 }
 #penbar{
 	padding: 5px;
