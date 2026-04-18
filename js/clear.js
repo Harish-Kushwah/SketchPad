@@ -2,6 +2,9 @@ var clearButton = document.getElementById('clear');
 
 
 function clearCanvas(){
+	if (typeof saveState === 'function') {
+		saveState();
+	}
 	context.clearRect(0, 0, canvas.width, canvas.height); 
 	context.beginPath();
 }

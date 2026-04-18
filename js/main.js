@@ -9,6 +9,9 @@ var dragging = false;
 context.lineWidth = radius * 2;
 
 var engage = function (e) {
+	if (typeof saveState === 'function') {
+		saveState();
+	}
 	dragging = true;
 	putPointForDesktop(e);
 	putPointForMobileDevices(e);

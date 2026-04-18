@@ -92,6 +92,40 @@
 	background-color:#818181;
 	transition-duration: 0.5s;
 }
+
+.history-btn{
+	margin-right:5px;
+	height:30px;
+	padding:8px 12px;
+	background-color:#434343;
+	padding-bottom:20px;
+	border-radius:5px;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	gap: 5px;
+}
+
+.history-btn:hover{
+	background-color:#818181;
+	transition-duration: 0.5s;
+}
+
+.history-btn.disabled{
+	opacity: 0.5;
+	cursor: not-allowed;
+}
+
+.history-btn.disabled:hover{
+	background-color:#434343;
+}
+
+.shortcut{
+	font-size: 10px;
+	opacity: 0.7;
+	margin-left: 5px;
+}
+
 #penbar{
 	padding: 5px;
 	margin-left:10px ;
